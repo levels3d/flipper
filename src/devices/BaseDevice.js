@@ -70,6 +70,10 @@ export default class BaseDevice {
   }
 
   supportsPlugin = (DevicePlugin: Class<FlipperDevicePlugin<>>): boolean => {
+    if(DevicePlugin.supportsDevice) {
+      return DevicePlugin.supportsDevice(this);
+    }
+    
     return this.supportedPlugins.includes(DevicePlugin.id);
   };
 

@@ -24,6 +24,7 @@ export {
 
 export {createTablePlugin} from './createTablePlugin.js';
 export {default as DetailSidebar} from './chrome/DetailSidebar.js';
+export {registerDevicePlugin} from './device-plugins';
 
 export {default as AndroidDevice} from './devices/AndroidDevice.js';
 export {default as Device} from './devices/BaseDevice.js';

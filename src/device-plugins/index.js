@@ -18,3 +18,7 @@ if (GK.get('sonar_uiperf')) {
 }
 
 export const devicePlugins = plugins;
+
+export function registerDevicePlugin(plugin: Class<SonarDevicePlugin<any>>) {
+  plugins.push(plugin);
+}
